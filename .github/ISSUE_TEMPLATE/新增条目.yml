@@ -1,0 +1,32 @@
+name: 新增条目
+description: 建议加一条"别做什么"
+title: "[新增] "
+labels: ["new-item"]
+body:
+  - type: input
+    id: what
+    attributes:
+      label: 一句话说清这条"别做什么"
+      placeholder: 不买带"稳赢"字样的量化跟单产品
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 为什么它值得进清单
+      description: 你或身边的人踩过这个坑？还是有研究？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 有没有可查的来源
+      description: 期刊、监管文件、判决书、官方统计。没有就写"没有"
+  - type: dropdown
+    id: caliber
+    attributes:
+      label: 主要损失在哪
+      options:
+        - 钱（本金）
+        - 风险（爆仓/被强平/流动性）
+        - 自由（刑事/行政处罚）

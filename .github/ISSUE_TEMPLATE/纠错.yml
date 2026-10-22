@@ -1,0 +1,37 @@
+name: 纠错
+description: 某条数字、来源或结论有问题
+title: "[纠错] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢核对。请尽量给出可查的一手来源（期刊 DOI、官方文件、法院判决书），
+        只有二手转述的话，请在下面注明。
+  - type: input
+    id: where
+    attributes:
+      label: 哪一条
+      description: 第几节第几条，或者贴上标题
+      placeholder: 第 2 节第 1 条
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 哪里有问题
+      description: 是数字、出处、结论，还是表述
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 你的一手来源
+      description: 链接、DOI、文件名、页码。核不到也没关系，写清楚就行
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我核对过这个来源，不是凭印象
+        - label: 这个来源是原始的（不是知乎/公众号转述）
